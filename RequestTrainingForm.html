@@ -1,0 +1,154 @@
+<style>
+
+* {
+    font-family: Gill Sans, Gill Sans MT, Myriad Pro, DejaVu Sans Condensed, Helvetica, Arial, sans-serif;
+    background-color: black;
+    color: darkgray;
+  }
+
+  .interact-img {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    width: 40%;
+    width: 100px;
+    height: 80px;
+    background-color: #202326;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #37bafb;
+    background-color: #202326;
+  }
+
+  .intro-p {
+    margin: auto;
+    max-width: 450px;
+    text-align: center;
+    background-color: #202326;
+  }
+
+  .head-div {
+    margin: auto;
+    border: 3px solid #202326;
+    width: 456px;
+    background-color: #202326;
+  }
+  
+  form {
+    max-width: 420px;
+    margin: 0 auto 50px;
+    padding: 15px;
+    border: 6px solid #202326;
+  }
+
+  input {
+    border: 3px solid #202326;
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+
+    +box-sizing
+      border-box
+  }
+
+  input:hover {
+    border:3px solid #37bafb;
+  }
+
+  .submit-wrap {
+    text-align: right;
+  }
+
+  [type="submit"] {
+    background: #37bafb;
+    color: black;
+    border: 3px solid #202326;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 33%;
+  }
+
+
+  .contact-info-group label {
+    //width: 50%;
+    //padding-right: 10px;
+    //float: left;
+
+    +box-sizing
+      border-box
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  form label span {
+    display: block;
+    font-size: 1.2em;
+  }
+
+
+</style>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    
+    <div class="head-div">
+      <img class="interact-img" src="https://luxonvideoinc-my.sharepoint.com/personal/daniel_estrada_luxonvideo_com/_layouts/15/guestaccess.aspx?docid=18733ef236efc44259a20bbeb964f0663&authkey=AYUYmoBpzFy7D-FoCQRHi6E">
+
+      <h2>
+        Request a Training/meeting at Arlenco
+      </h2>
+
+      <p class="intro-p">We'll arrange the meeting and provide the place (along with refreshments). Just let us know what products you'd like to learn more about, or the Vendor you'd like to meet with. If you have a date/time preference, just let us know below!</p>
+      <br/>
+    </div>
+    <form action="https://formspree.io/xzzlayjx" method="POST"> 
+      <input type="hidden" name="_format" value="plain" />
+      <input type="text" name="_gotcha" style="display:none">
+
+      <div class="contact-info-group">
+
+        <label><span>Which branch would you like to have a training at?</span>
+          <input list="browsers" type="branch" name="branch">
+          <datalist id="browsers">
+            <option value="Albuquerque">
+            <option value="Boise">
+            <option value="Portland">
+            <option value="Salt Lake City">
+            <option value="Spokane">
+          </datalist>
+        </label>
+
+        <label><span>Name</span>
+        <input type="name" name="name"></label>
+
+        <label><span>Email</span>
+        <input type="email" name="email"></label>
+
+        <label><span>What date/time-frame would you like us to request this event for?</span>
+          <input type="date" name="date">
+        </label>
+
+        <label><span>Time</span>
+        <input type="time" name="training"></label>
+
+      </div>
+      <div class="submit-wrap">
+        <input type="submit"></button>
+      </div>
+
+    </form>
+
+  </body>
+</html>
